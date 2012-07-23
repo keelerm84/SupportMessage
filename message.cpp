@@ -65,7 +65,7 @@ void Message::buildBuddyList()
 
 void Message::sendEmail()
 {
-    QString subject = QString("C# %1 -- %2").arg(ui->txtCustNo->text()).arg(ui->txtSubject->text());
+    QString subject = QString("C#%1 -- %2").arg(ui->txtCustNo->text()).arg(ui->txtSubject->text());
     QString body = QString("Contact %1 at %2\n\n%3").arg(ui->txtContact->text()).arg(ui->txtPhone->text()).arg(ui->txtMessage->toPlainText());
 
     SmtpClient smtp(settings->host(), settings->port(), settings->useSsl() ? SmtpClient::SslConnection : SmtpClient::TcpConnection);
