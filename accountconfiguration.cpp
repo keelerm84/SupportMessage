@@ -38,6 +38,7 @@ void AccountConfiguration::restoreSelections()
     populateAccounts(clientIndex);
     int accountIndex = ui->cmbAccounts->findData(settings->account());
     if ( -1 == accountIndex ) return;
+    ui->cmbAccounts->setCurrentIndex(accountIndex);
 
     populateBuddies(accountIndex);
     QStringList buddies = settings->buddies();
