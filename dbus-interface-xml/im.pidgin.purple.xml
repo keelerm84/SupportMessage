@@ -1,0 +1,62 @@
+<node>
+    <interface name="im.pidgin.purple.PurpleObject">
+        <method name="PurpleConversationDestroy">
+            <arg name="conversationId" type="i" direction="in" />
+        </method>
+
+        <method name="PurpleConversationNew">
+            <arg name="conversationType" type="i" direction="in"/>
+            <arg name="accountId" type="i" direction="in" />
+            <arg name="name" type="s" direction="in" />
+            <arg name="conversationId" type="i" direction="out" />
+        </method>
+
+        <method name="PurpleConversationGetImData">
+            <arg name="conversationId" type="i" direction="in" />
+            <arg name="messageId" type="i" direction="out" />
+        </method>
+
+        <method name="PurpleConvImSend">
+            <arg name="messageId" type="i" direction="in" />
+            <arg name="message" type="s" direction="in" />
+        </method>
+
+        <method name="PurpleFindBuddies">
+            <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;int>"/>
+            <arg name="accountId" type="i" direction="in" />
+            <arg name="screenName" type="s" direction="in" />
+            <arg name="buddies" type="ai" direction="out" />
+        </method>
+
+        <method name="PurpleBuddyGetAlias">
+            <arg name="buddyId" type="i" direction="in" />
+            <arg name="alias" type="s" direction="out" />
+        </method>
+
+        <method name="PurpleBuddyGetName">
+            <arg name="buddyId" type="i" direction="in" />
+            <arg name="name" type="s" direction="out" />
+        </method>
+
+        <method name="PurpleAccountsFind">
+            <arg name="name" type="s" direction="in" />
+            <arg name="protocol" type="s" direction="in" />
+            <arg name="accountId" type="i" direction="out" />
+        </method>
+
+        <method name="PurpleAccountsGetAll">
+            <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;int>"/>
+            <arg name="accountIds" type="ai" direction="out" />
+        </method>
+
+        <method name="PurpleAccountGetAlias">
+            <arg name="accountId" type="i" direction="in" />
+            <arg name="alias" type="s" direction="out" />
+        </method>
+
+        <method name="PurpleAccountGetNameForDisplay">
+            <arg name="accountId" type="i" direction="in" />
+            <arg name="name" type="s" direction="out" />
+        </method>
+    </interface>
+</node>

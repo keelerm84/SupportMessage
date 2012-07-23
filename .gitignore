@@ -1,0 +1,9 @@
+*.sublime-*
+.tags*
+Makefile
+moc_*
+*.o
+ui_*h
+qrc_*cpp
+SupportMessage
+*pro.user
